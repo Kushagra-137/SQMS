@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank - QueueEaseHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>QueueEase<span>Hub</span></h1>
+        <nav>
+            <a href="dashboard.html">Home</a>
+            <a href="clinic.html">Clinic</a>
+            <a href="salon.html">Salon</a>
+            <a href="bank.html" class="active">Bank</a>
+            <a href="dashboard.html#my-ticket">My Ticket</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Live Status Board - Bank Branch</h2>
+
+        <div class="counters">
+            <div class="card on"><h3>Cash Counter 1</h3><h1>B-102</h1><p>Now Serving</p></div>
+            <div class="card on"><h3>Loans Desk 2</h3><h1>L-405</h1><p>Now Serving</p></div>
+            <div class="card off"><h3>Counter 3</h3><h1>--</h1><p>Closed</p></div>
+        </div>
+
+        <section>
+            <h2>Services &amp; Waiting Time</h2>
+            <div class="services">
+                <div class="card"><h3>Cash Deposit/Withdrawal</h3><p>Avg. wait: 4 mins</p><p>Currently Serving: B-102 | Your Token: B-105</p></div>
+                <div class="card"><h3>Loan &amp; Mortgage Consultation</h3><p>Avg. wait: 18 mins</p><p>Currently Serving: L-405 | Your Token: L-408</p></div>
+                <div class="card"><h3>Account Opening / Support</h3><p>Avg. wait: 9 mins</p><p>Currently Serving: A-210 | Your Token: A-213</p></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Next In Line</h2>
+            <table width="100%">
+                <tr><th>Token</th><th>Service Branch</th><th>Est. Wait</th></tr>
+                <tr><td><mark>B-103</mark></td><td>Cashier</td><td>3 mins</td></tr>
+                <tr><td><mark>L-406</mark></td><td>Loans Desk</td><td>11 mins</td></tr>
+                <tr><td><mark>B-104</mark></td><td>Cashier</td><td>14 mins</td></tr>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>Ticket Kiosk</h2>
+            <form action="dashboard.html#my-ticket" method="get">
+                <label>Visitor Name</label>
+                <input type="text" name="name">
+
+                <label><input type="radio" name="service" checked> Cash Deposit/Withdrawal (4 mins)</label><br>
+                <label><input type="radio" name="service"> Loan &amp; Mortgage Consultation (18 mins)</label><br>
+                <label><input type="radio" name="service"> Account Opening / Support (9 mins)</label><br><br>
+
+                <button type="submit">Generate Ticket</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Rate Your Experience</h2>
+            <p><small>Your feedback helps us make QueueEaseHub better.</small></p>
+            <form action="#">
+                <label>Rating</label>
+                <select name="rating">
+                    <option>5 - Excellent</option>
+                    <option>4 - Good</option>
+                    <option>3 - Average</option>
+                    <option>2 - Poor</option>
+                    <option>1 - Very Poor</option>
+                </select>
+
+                <label>What can we improve?</label>
+                <textarea name="comment" rows="3"></textarea>
+
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

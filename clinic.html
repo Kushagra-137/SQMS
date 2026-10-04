@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic - QueueEaseHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>QueueEase<span>Hub</span></h1>
+        <nav>
+            <a href="dashboard.html">Home</a>
+            <a href="clinic.html" class="active">Clinic</a>
+            <a href="salon.html">Salon</a>
+            <a href="bank.html">Bank</a>
+            <a href="dashboard.html#my-ticket">My Ticket</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Live Patients Board - General Hospital</h2>
+
+        <div class="counters">
+            <div class="card on"><h3>OPD Room 1 (Dr. Sharma)</h3><h1>P-304</h1><p>Now Serving</p></div>
+            <div class="card on"><h3>Pediatrics Room 2 (Dr. Verma)</h3><h1>P-112</h1><p>Now Serving</p></div>
+            <div class="card off"><h3>Counter 3</h3><h1>--</h1><p>Closed</p></div>
+        </div>
+
+        <section>
+            <h2>Services &amp; Waiting Time</h2>
+            <div class="services">
+                <div class="card"><h3>General OPD Consultation</h3><p>Avg. wait: 12 mins</p><p>Currently Serving: P-304 | Your Patient No: P-307</p></div>
+                <div class="card"><h3>Vaccination &amp; Immunization</h3><p>Avg. wait: 5 mins</p><p>Currently Serving: V-045 | Your Patient No: V-048</p></div>
+                <div class="card"><h3>Diagnostic / Blood Test Lab</h3><p>Avg. wait: 20 mins</p><p>Currently Serving: P-218 | Your Patient No: P-222</p></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Next In Line</h2>
+            <table width="100%">
+                <tr><th>Token</th><th>Consultation Type</th><th>Est. Wait</th></tr>
+                <tr><td><mark>P-305</mark></td><td>General OPD</td><td>8 mins</td></tr>
+                <tr><td><mark>P-220</mark></td><td>Diagnostic Lab</td><td>15 mins</td></tr>
+                <tr><td><mark>P-306</mark></td><td>General OPD</td><td>22 mins</td></tr>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>Ticket Kiosk</h2>
+            <form action="dashboard.html#my-ticket" method="get">
+                <label>Patient Name</label>
+                <input type="text" name="name">
+
+                <label><input type="radio" name="service" checked> General OPD Consultation (12 mins)</label><br>
+                <label><input type="radio" name="service"> Vaccination &amp; Immunization (5 mins)</label><br>
+                <label><input type="radio" name="service"> Diagnostic / Blood Test Lab (20 mins)</label><br><br>
+
+                <button type="submit">Generate Ticket</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Rate Your Experience</h2>
+            <p><small>Your feedback helps us make QueueEaseHub better.</small></p>
+            <form action="#">
+                <label>Rating</label>
+                <select name="rating">
+                    <option>5 - Excellent</option>
+                    <option>4 - Good</option>
+                    <option>3 - Average</option>
+                    <option>2 - Poor</option>
+                    <option>1 - Very Poor</option>
+                </select>
+
+                <label>What can we improve?</label>
+                <textarea name="comment" rows="3"></textarea>
+
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

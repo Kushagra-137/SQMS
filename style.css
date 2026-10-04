@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --bg: #1b1325;
+    --card: #2b2140;
+    --main: #5eead4;
+    --accent: #ff7a90;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: white;
+    line-height: 1.6;
+}
+
+h2, h3, p, main h1 {
+    margin-bottom: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    background: #120b1c;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    margin-left: 25px;
+}
+
+h1 span, h2 span, header a.active, main h1, .open {
+    color: var(--accent);
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.counters, .services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.on {
+    border: 2px solid var(--main);
+}
+
+.off {
+    opacity: 0.5;
+}
+
+mark {
+    background: var(--main);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+input[type="text"], input[type="password"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+}
+
+button {
+    background: var(--accent);
+    border: none;
+    padding: 12px 30px;
+}
+
+.login {
+    width: 380px;
+    margin: 80px auto;
+    text-align: center;
+}
